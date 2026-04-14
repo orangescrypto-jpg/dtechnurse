@@ -76,6 +76,101 @@
             margin-bottom: 10px;
         }
         
+        /* Conclusion Box */
+        .conclusion-box {
+            background: linear-gradient(135deg, #667eea10 0%, #764ba210 100%);
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            margin: 40px 0 20px;
+            border-radius: 15px;
+        }
+        
+        .conclusion-box h3 {
+            margin-top: 0;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .conclusion-box p {
+            margin-bottom: 0;
+        }
+        
+        /* Do's Box (Green) */
+        .dos-box {
+            background: #d4edda20;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 10px;
+        }
+        
+        .dos-box h3 {
+            margin-top: 0;
+            color: #28a745;
+        }
+        
+        .dos-box ul, .donts-box ul {
+            margin-bottom: 0;
+        }
+        
+        .dos-box li, .donts-box li {
+            margin-bottom: 12px;
+        }
+        
+        /* Don'ts Box (Red) */
+        .donts-box {
+            background: #f8d7da20;
+            border-left: 4px solid #dc3545;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 10px;
+        }
+        
+        .donts-box h3 {
+            margin-top: 0;
+            color: #dc3545;
+        }
+        
+        /* Skills Grid for Telehealth Post */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .skill-card {
+            background: #f7fafc;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-color: #667eea;
+        }
+        
+        .skill-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .skill-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: #2d3748;
+        }
+        
+        .skill-card p {
+            font-size: 0.95rem;
+            color: #718096;
+            line-height: 1.6;
+        }
+        
         .back-button {
             display: inline-flex;
             align-items: center;
@@ -107,6 +202,7 @@
             gap: 15px;
             justify-content: center;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
         
         .share-btn {
@@ -137,6 +233,22 @@
             transform: translateY(-3px);
         }
         
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #2d3748;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        /* Responsive Design */
         @media (max-width: 768px) {
             .post-title {
                 font-size: 1.8rem;
@@ -146,6 +258,35 @@
                 flex-direction: column;
                 align-items: center;
                 gap: 10px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links a {
+                margin: 10px 0;
             }
         }
     </style>
@@ -221,6 +362,7 @@
                     <h4>Connect With Us</h4>
                     <p>📧 dtech-nurse@gmail.com</p>
                     <p>🎵 @dtechnurse on TikTok</p>
+                    <p>💼 LinkedIn (Coming Soon)</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -231,6 +373,16 @@
 
     <script src="js/script.js"></script>
     <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+        
         // Load post data
         function loadPost() {
             const postData = localStorage.getItem('currentPost');
