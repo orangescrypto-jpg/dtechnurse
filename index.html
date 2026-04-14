@@ -169,28 +169,15 @@
 
     <script src="js/script.js"></script>
     <script>
-        // Complete blog posts data for homepage (MUST MATCH blog.html EXACTLY)
+        // Complete blog posts data
         const allBlogPosts = [
             {
                 id: 1,
                 title: "Getting Started with Electronic Health Records (EHR)",
                 date: "April 14, 2026",
                 category: "EHR Systems",
-                excerpt: "Electronic Health Records are digital versions of traditional paper charts. Learn why EHR matters for nurses and how to succeed with these essential systems.",
-                content: `<h2>📋 What Are Electronic Health Records?</h2>
-                    <p>Electronic Health Records, often called EHR, are simply digital versions of the traditional paper charts used in hospitals. Instead of flipping through files, everything about a patient is stored in one secure digital system. This includes their medical history, diagnoses, medications, treatment plans, immunization records, allergies, lab results, and even imaging reports.</p>
-                    
-                    <p>Think of it as a complete story of the patient's health that can be accessed anytime it is needed. This makes it easier for healthcare professionals to understand the patient quickly and provide the right care.</p>
-                    
-                    <h2>💉 Why EHR Matters for Nurses</h2>
-                    <p>As a nurse, you will spend a large part of your shift working with EHR systems. From documenting vital signs to administering medications and updating patient progress, EHR becomes part of your daily routine.</p>
-                    
-                    <p>Understanding how to use it well is not just about typing information. It directly affects patient safety and quality of care. Clear and accurate documentation helps other healthcare professionals make informed decisions. It also reduces errors, improves communication within the healthcare team, and ensures continuity of care.</p>
-                    
-                    <div class="conclusion-box">
-                        <h3>💭 Final Thought</h3>
-                        <p>EHR systems are powerful tools that support modern healthcare. They are designed to make your work easier, improve accuracy, and enhance patient outcomes. However, they do not replace your clinical judgment or critical thinking.</p>
-                    </div>`,
+                excerpt: "Electronic Health Records are digital versions of traditional paper charts. Learn why EHR matters for nurses.",
+                content: "<h2>📋 What Are Electronic Health Records?</h2><p>Electronic Health Records, often called EHR, are simply digital versions of the traditional paper charts used in hospitals.</p><div class='conclusion-box'><h3>💭 Final Thought</h3><p>EHR systems are powerful tools that support modern healthcare.</p></div>",
                 readTime: "6 min read"
             },
             {
@@ -198,19 +185,8 @@
                 title: "5 Essential Apps Every Modern Nurse Should Have",
                 date: "April 10, 2026",
                 category: "Mobile Apps",
-                excerpt: "Being a nurse today goes far beyond clinical skills alone. Discover the essential digital tools that can make your work easier, safer, and more efficient.",
-                content: `<p>Being a nurse today goes far beyond clinical skills alone. With the fast pace of healthcare and the constant need for accuracy, having the right digital tools can make your work easier, safer, and more efficient.</p>
-                    
-                    <h2>📱 MedCalc</h2>
-                    <p>As a nurse, you will often need to calculate drug dosages, IV drip rates, or adjust values quickly. MedCalc helps you perform these calculations instantly and reduces the chances of making errors.</p>
-                    
-                    <h2>💊 Epocrates</h2>
-                    <p>This app is widely trusted for drug information. If you ever need to check a medication, confirm the correct dosage, or identify a pill, Epocrates makes it simple.</p>
-                    
-                    <div class="conclusion-box">
-                        <h3>🎯 Final Thoughts</h3>
-                        <p>These apps are not just about convenience. They help you save time, improve accuracy, and provide better care for your patients.</p>
-                    </div>`,
+                excerpt: "Discover the essential digital tools that can make your work easier, safer, and more efficient.",
+                content: "<p>Being a nurse today goes far beyond clinical skills alone.</p><h2>📱 MedCalc</h2><p>As a nurse, you will often need to calculate drug dosages.</p><div class='conclusion-box'><h3>🎯 Final Thoughts</h3><p>These apps help you save time and improve accuracy.</p></div>",
                 readTime: "6 min read"
             },
             {
@@ -218,31 +194,8 @@
                 title: "Understanding HIPAA in the Digital Age",
                 date: "April 5, 2026",
                 category: "Privacy & Security",
-                excerpt: "Healthcare has changed with technology at the center of patient care. Learn how HIPAA protects patient privacy in our digital world and best practices for every nurse.",
-                content: `<h2>🏥 HIPAA in 2026: What Has Changed</h2>
-                    <p>Healthcare has changed a lot over the years, and technology is now at the center of patient care.</p>
-                    
-                    <div class="dos-box">
-                        <h3>✅ What You SHOULD Do:</h3>
-                        <ul>
-                            <li>Use encrypted messaging platforms</li>
-                            <li>Enable two-factor authentication</li>
-                            <li>Log out of workstations when stepping away</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="donts-box">
-                        <h3>❌ What You SHOULD NOT Do:</h3>
-                        <ul>
-                            <li>Share patient info on social media</li>
-                            <li>Take photos of patients on personal phones</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="conclusion-box">
-                        <h3>💭 Final Thought</h3>
-                        <p>Patient trust is one of the most important parts of healthcare. Protecting privacy is a commitment to the dignity and safety of every patient.</p>
-                    </div>`,
+                excerpt: "Learn how HIPAA protects patient privacy in our digital world.",
+                content: "<h2>🏥 HIPAA in 2026</h2><div class='dos-box'><h3>✅ What You SHOULD Do:</h3><ul><li>Use encrypted messaging</li><li>Enable two-factor authentication</li></ul></div><div class='conclusion-box'><h3>💭 Final Thought</h3><p>Protecting privacy is a commitment to patient safety.</p></div>",
                 readTime: "7 min read"
             },
             {
@@ -250,32 +203,13 @@
                 title: "Telehealth: The Future of Nursing is Here",
                 date: "March 28, 2026",
                 category: "Telehealth",
-                excerpt: "Healthcare is no longer limited to hospital walls. Discover how telenursing is transforming patient care.",
-                content: `<h2>🏥 The Rise of Telehealth Nursing</h2>
-                    <p>Healthcare is no longer limited to hospital walls. With the growth of digital technology, nurses can now care for patients from a distance.</p>
-                    
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <div class="skill-icon">💬</div>
-                            <h3>Strong Communication</h3>
-                            <p>Ask clear questions and listen carefully.</p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">🎥</div>
-                            <h3>Tech Confidence</h3>
-                            <p>Be comfortable with video conferencing tools.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="conclusion-box">
-                        <h3>💭 Final Thought</h3>
-                        <p>The future of nursing is changing, and telehealth is a big part of that transformation.</p>
-                    </div>`,
+                excerpt: "Discover how telenursing is transforming patient care.",
+                content: "<h2>🏥 The Rise of Telehealth Nursing</h2><p>Healthcare is no longer limited to hospital walls.</p><div class='skills-grid'><div class='skill-card'><div class='skill-icon'>💬</div><h3>Communication</h3><p>Ask clear questions.</p></div></div><div class='conclusion-box'><h3>💭 Final Thought</h3><p>Telehealth is the future of nursing.</p></div>",
                 readTime: "6 min read"
             }
         ];
 
-        // Display latest 4 posts on homepage
+        // Display posts on homepage
         function displayLatestPosts() {
             const postsContainer = document.getElementById('latest-posts');
             if (!postsContainer) return;
@@ -302,22 +236,30 @@
             postsContainer.innerHTML = postsHTML;
         }
         
-        // Open individual post
+        // Open individual post - FIXED VERSION
         function openPost(postId) {
+            console.log("Opening post with ID:", postId);
             const post = allBlogPosts.find(p => p.id === postId);
             if (post) {
+                console.log("Post found:", post.title);
                 // Save to localStorage
                 localStorage.setItem('currentPost', JSON.stringify(post));
+                console.log("Saved to localStorage");
+                // Verify it saved
+                const saved = localStorage.getItem('currentPost');
+                console.log("Saved data:", saved ? "Yes" : "No");
                 // Redirect to post page
                 window.location.href = 'post.html';
             } else {
-                console.error('Post not found:', postId);
+                console.error('Post not found for ID:', postId);
+                alert('Error: Post not found');
             }
         }
         
         // Display posts when page loads
         document.addEventListener('DOMContentLoaded', () => {
             displayLatestPosts();
+            console.log("Page loaded, posts ready");
         });
     </script>
 </body>
