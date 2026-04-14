@@ -88,21 +88,6 @@
     </section>
 
     <!-- Stats Section -->
-        <!-- Latest Blog Posts Section -->
-    <section class="latest-blog">
-        <div class="container">
-            <div class="section-header">
-                <h2>Latest from Our Blog</h2>
-                <p>Stay updated with the latest insights at the intersection of nursing and technology</p>
-            </div>
-            <div class="blog-preview-grid" id="latest-posts">
-                <div class="loading-spinner">Loading posts...</div>
-            </div>
-            <div class="view-all-container">
-                <a href="blog.html" class="btn btn-secondary">View All Posts →</a>
-            </div>
-        </div>
-    </section>
     <section class="stats">
         <div class="container">
             <div class="stats-grid">
@@ -122,6 +107,22 @@
                     <div class="stat-number" data-target="15">0</div>
                     <div class="stat-label">Countries Reached</div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Blog Posts Section -->
+    <section class="latest-blog">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest from Our Blog</h2>
+                <p>Stay updated with the latest insights at the intersection of nursing and technology</p>
+            </div>
+            <div class="blog-preview-grid" id="latest-posts">
+                <div class="loading-spinner">Loading posts...</div>
+            </div>
+            <div class="view-all-container">
+                <a href="blog.html" class="btn btn-secondary">View All Posts →</a>
             </div>
         </div>
     </section>
@@ -149,14 +150,15 @@
                     <h4>Quick Links</h4>
                     <a href="index.html">Home</a>
                     <a href="about.html">About</a>
+                    <a href="blog.html">Blog</a>
                     <a href="contact.html">Contact</a>
                     <a href="privacy.html">Privacy</a>
                 </div>
                 <div class="footer-section">
                     <h4>Connect With Us</h4>
-                    <p>📧 dtechnurse@example.com</p>
-                    <p>🐦 Twitter</p>
-                    <p>💼 LinkedIn</p>
+                    <p>📧 dtech-nurse@gmail.com</p>
+                    <p>🎵 @dtechnurse on TikTok</p>
+                    <p>💼 LinkedIn (Coming Soon)</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -167,30 +169,38 @@
 
     <script src="js/script.js"></script>
     <script>
-        // Blog posts data for homepage
+        // Blog posts data for homepage (4 most recent posts)
         const latestPosts = [
             {
                 id: 1,
                 title: "Getting Started with Electronic Health Records (EHR)",
                 date: "April 14, 2026",
                 category: "EHR Systems",
-                excerpt: "Learn the basics of Electronic Health Records and how they're transforming patient care...",
-                readTime: "5 min read"
+                excerpt: "Electronic Health Records are digital versions of traditional paper charts. Learn why EHR matters for nurses and how to succeed with these essential systems.",
+                readTime: "6 min read"
             },
             {
                 id: 2,
-                title: "5 Essential Apps Every Nurse Should Have",
+                title: "5 Essential Apps Every Modern Nurse Should Have",
                 date: "April 10, 2026",
                 category: "Mobile Apps",
-                excerpt: "Discover the best mobile applications that can help you stay organized, calculate dosages...",
-                readTime: "4 min read"
+                excerpt: "Being a nurse today goes far beyond clinical skills alone. Discover the essential digital tools that can make your work easier, safer, and more efficient.",
+                readTime: "6 min read"
             },
             {
                 id: 3,
                 title: "Understanding HIPAA in the Digital Age",
                 date: "April 5, 2026",
                 category: "Privacy & Security",
-                excerpt: "How to protect patient privacy while using modern technology. Essential guidelines...",
+                excerpt: "Healthcare has changed with technology at the center of patient care. Learn how HIPAA protects patient privacy in our digital world and best practices for every nurse.",
+                readTime: "7 min read"
+            },
+            {
+                id: 4,
+                title: "Telehealth: The Future of Nursing is Here",
+                date: "March 28, 2026",
+                category: "Telehealth",
+                excerpt: "Healthcare is no longer limited to hospital walls. Discover how telenursing is transforming patient care and creating new opportunities for nurses.",
                 readTime: "6 min read"
             }
         ];
@@ -222,33 +232,109 @@
         }
         
         function openPost(postId) {
-            // Full blog posts data (same as in blog.html)
+            // Full blog posts data with complete content
             const allPosts = [
                 {
                     id: 1,
                     title: "Getting Started with Electronic Health Records (EHR)",
                     date: "April 14, 2026",
                     category: "EHR Systems",
-                    excerpt: "Learn the basics of Electronic Health Records and how they're transforming patient care...",
-                    content: `<h2>What Are Electronic Health Records?</h2><p>Electronic Health Records (EHR) are digital versions of patients' paper charts...</p>`,
-                    readTime: "5 min read"
+                    excerpt: "Electronic Health Records are digital versions of traditional paper charts...",
+                    content: `<h2>📋 What Are Electronic Health Records?</h2>
+                        <p>Electronic Health Records, often called EHR, are simply digital versions of the traditional paper charts used in hospitals. Instead of flipping through files, everything about a patient is stored in one secure digital system. This includes their medical history, diagnoses, medications, treatment plans, immunization records, allergies, lab results, and even imaging reports.</p>
+                        
+                        <p>Think of it as a complete story of the patient's health that can be accessed anytime it is needed. This makes it easier for healthcare professionals to understand the patient quickly and provide the right care.</p>
+                        
+                        <h2>💉 Why EHR Matters for Nurses</h2>
+                        <p>As a nurse, you will spend a large part of your shift working with EHR systems. From documenting vital signs to administering medications and updating patient progress, EHR becomes part of your daily routine.</p>
+                        
+                        <p>Understanding how to use it well is not just about typing information. It directly affects patient safety and quality of care. Clear and accurate documentation helps other healthcare professionals make informed decisions. It also reduces errors, improves communication within the healthcare team, and ensures continuity of care.</p>
+                        
+                        <div class="conclusion-box">
+                            <h3>💭 Final Thought</h3>
+                            <p>EHR systems are powerful tools that support modern healthcare. They are designed to make your work easier, improve accuracy, and enhance patient outcomes. However, they do not replace your clinical judgment or critical thinking.</p>
+                        </div>`,
+                    readTime: "6 min read"
                 },
                 {
                     id: 2,
-                    title: "5 Essential Apps Every Nurse Should Have",
+                    title: "5 Essential Apps Every Modern Nurse Should Have",
                     date: "April 10, 2026",
                     category: "Mobile Apps",
-                    excerpt: "Discover the best mobile applications that can help you stay organized...",
-                    content: `<h2>Must-Have Apps for Modern Nurses</h2><p>Perfect for quick medical calculations...</p>`,
-                    readTime: "4 min read"
+                    excerpt: "Being a nurse today goes far beyond clinical skills alone...",
+                    content: `<p>Being a nurse today goes far beyond clinical skills alone. With the fast pace of healthcare and the constant need for accuracy, having the right digital tools can make your work easier, safer, and more efficient.</p>
+                        
+                        <h2>📱 MedCalc</h2>
+                        <p>As a nurse, you will often need to calculate drug dosages, IV drip rates, or adjust values quickly. MedCalc helps you perform these calculations instantly and reduces the chances of making errors.</p>
+                        
+                        <h2>💊 Epocrates</h2>
+                        <p>This app is widely trusted for drug information. If you ever need to check a medication, confirm the correct dosage, or identify a pill, Epocrates makes it simple.</p>
+                        
+                        <div class="conclusion-box">
+                            <h3>🎯 Final Thoughts</h3>
+                            <p>These apps are not just about convenience. They help you save time, improve accuracy, and provide better care for your patients.</p>
+                        </div>`,
+                    readTime: "6 min read"
                 },
                 {
                     id: 3,
                     title: "Understanding HIPAA in the Digital Age",
                     date: "April 5, 2026",
                     category: "Privacy & Security",
-                    excerpt: "How to protect patient privacy while using modern technology...",
-                    content: `<h2>HIPAA in 2026: What's Changed?</h2><p>The digital transformation of healthcare brings new challenges...</p>`,
+                    excerpt: "Healthcare has changed with technology at the center of patient care...",
+                    content: `<h2>🏥 HIPAA in 2026: What Has Changed</h2>
+                        <p>Healthcare has changed a lot over the years, and technology is now at the center of patient care. From electronic records to mobile communication, nurses rely heavily on digital tools every day.</p>
+                        
+                        <div class="dos-box">
+                            <h3>✅ What You SHOULD Do:</h3>
+                            <ul>
+                                <li>Use encrypted messaging platforms</li>
+                                <li>Enable two-factor authentication</li>
+                                <li>Log out of workstations when stepping away</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="donts-box">
+                            <h3>❌ What You SHOULD NOT Do:</h3>
+                            <ul>
+                                <li>Share patient info on social media</li>
+                                <li>Take photos of patients on personal phones</li>
+                                <li>Discuss patient info in public areas</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="conclusion-box">
+                            <h3>💭 Final Thought</h3>
+                            <p>Patient trust is one of the most important parts of healthcare. Protecting privacy is a commitment to the dignity and safety of every patient you care for.</p>
+                        </div>`,
+                    readTime: "7 min read"
+                },
+                {
+                    id: 4,
+                    title: "Telehealth: The Future of Nursing is Here",
+                    date: "March 28, 2026",
+                    category: "Telehealth",
+                    excerpt: "Healthcare is no longer limited to hospital walls...",
+                    content: `<h2>🏥 The Rise of Telehealth Nursing</h2>
+                        <p>Healthcare is no longer limited to hospital walls. With the growth of digital technology, nurses can now care for patients from a distance while still making a real impact.</p>
+                        
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-icon">💬</div>
+                                <h3>Strong Communication</h3>
+                                <p>You must ask clear questions, listen carefully, and guide patients effectively.</p>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-icon">🎥</div>
+                                <h3>Tech Confidence</h3>
+                                <p>Being comfortable with video conferencing tools is essential for smooth care delivery.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="conclusion-box">
+                            <h3>💭 Final Thought</h3>
+                            <p>The future of nursing is changing, and telehealth is a big part of that transformation. The goal remains the same: to provide safe, compassionate, and effective care, no matter the distance.</p>
+                        </div>`,
                     readTime: "6 min read"
                 }
             ];
