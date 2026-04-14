@@ -3,73 +3,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Message Sent - D-Tech Nurse</title>
+    <title>Contact - D-Tech Nurse</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .thank-you-container {
-            text-align: center;
-            padding: 20px;
-        }
-        .thank-you-card {
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(10px);
-            padding: 50px;
-            border-radius: 20px;
-            max-width: 500px;
-            margin: 0 auto;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-        .thank-you-card .emoji {
-            font-size: 4rem;
-            margin-bottom: 20px;
-        }
-        .thank-you-card h1 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            color: #2d3748;
-        }
-        .thank-you-card p {
-            color: #718096;
-            margin-bottom: 10px;
-        }
-        .btn-home {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            margin-top: 30px;
-            font-weight: 600;
-            transition: transform 0.3s;
-        }
-        .btn-home:hover {
-            transform: translateY(-3px);
-        }
-    </style>
 </head>
 <body>
-    <div class="thank-you-container">
-        <div class="thank-you-card">
-            <div class="emoji">📧✨</div>
-            <h1>Thank You!</h1>
-            <p>Your message has been sent successfully.</p>
-            <p>We'll get back to you within 24-48 hours.</p>
-            <a href="index.html" class="btn-home">Return to Homepage →</a>
+    <!-- Navigation Menu -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">💊</span>
+                D-Tech Nurse
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="privacy.html">Privacy</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>We'd love to hear from you</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-page">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info-card">
+                    <h2>Let's Connect</h2>
+                    <p>Have questions about nursing and technology? Want to collaborate? Reach out to us through any of these channels.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">📧</div>
+                            <div class="method-details">
+                                <h3>Email</h3>
+                                <p>dtech-nurse@gmail.com</p>
+                                <a href="mailto:dtech-nurse@gmail.com" class="method-link">Send Email →</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">🎵</div>
+                            <div class="method-details">
+                                <h3>TikTok</h3>
+                                <p>@dtechnurse</p>
+                                <a href="https://tiktok.com/@dtechnurse" target="_blank" class="method-link">Follow Us →</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">💼</div>
+                            <div class="method-details">
+                                <h3>LinkedIn</h3>
+                                <p>Coming Soon</p>
+                                <a href="#" class="method-link disabled">Coming Soon</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">🐦</div>
+                            <div class="method-details">
+                                <h3>Twitter/X</h3>
+                                <p>Coming Soon</p>
+                                <a href="#" class="method-link disabled">Coming Soon</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form-card">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="_replyto" required placeholder="john@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="How can we help?">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell us what you're thinking..."></textarea>
+                        </div>
+                        
+                        <!-- Hidden field to prevent spam -->
+                        <input type="text" name="_gotcha" style="display:none">
+                        
+                        <!-- Redirect after submission -->
+                        <input type="hidden" name="_next" value="https://orangescrypto-jpg.github.io/dtechnurse/thank-you.html">
+                        
+                        <button type="submit" class="btn btn-primary submit-btn">Send Message ✉️</button>
+                        <p class="form-note">* We'll get back to you within 24-48 hours</p>
+                    </form>
+                    <div id="form-status" style="display:none; margin-top:20px; padding:15px; border-radius:10px;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to common questions</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>❓</span>
+                        <h3>How quickly do you respond?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We typically respond within 24-48 hours during business days.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>❓</span>
+                        <h3>Do you offer consulting services?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Contact us directly to discuss your specific needs.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>❓</span>
+                        <h3>Can I collaborate with you?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We're always open to collaborations and partnerships.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>D-Tech Nurse</h3>
+                    <p>Bridging healthcare and technology for a better future.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="privacy.html">Privacy</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <p>📧 dtech-nurse@gmail.com</p>
+                    <p>🎵 @dtechnurse on TikTok</p>
+                    <p>💼 LinkedIn (Coming Soon)</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 D-Tech Nurse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+        
+        // Form submission handling with AJAX
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('form-status');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Show loading state
+                const submitBtn = contactForm.querySelector('.submit-btn');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = 'Sending... ✉️';
+                submitBtn.disabled = true;
+                
+                // Get form data
+                const formData = new FormData(contactForm);
+                
+                try {
+                    const response = await fetch(contactForm.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        // Show success message
+                        formStatus.style.display = 'block';
+                        formStatus.style.backgroundColor = '#d4edda';
+                        formStatus.style.color = '#155724';
+                        formStatus.style.border = '1px solid #c3e6cb';
+                        formStatus.innerHTML = '✅ Thank you! Your message has been sent successfully. We\'ll get back to you soon!';
+                        
+                        // Reset form
+                        contactForm.reset();
+                        
+                        // Redirect to thank you page after 2 seconds
+                        setTimeout(() => {
+                            window.location.href = 'thank-you.html';
+                        }, 2000);
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                } catch (error) {
+                    // Show error message
+                    formStatus.style.display = 'block';
+                    formStatus.style.backgroundColor = '#f8d7da';
+                    formStatus.style.color = '#721c24';
+                    formStatus.style.border = '1px solid #f5c6cb';
+                    formStatus.innerHTML = '❌ Oops! Something went wrong. Please try again or email us directly at dtech-nurse@gmail.com';
+                    
+                    // Reset button
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }
+            });
+        }
+    </script>
 </body>
 </html>
