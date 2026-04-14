@@ -983,3 +983,29 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* About Page Image */
+.mission-image {
+    text-align: center;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.about-image:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .about-image {
+        max-width: 200px;
+        margin-top: 20px;
+    }
+                                 }
+
