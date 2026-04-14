@@ -14,12 +14,10 @@
             margin: 0 auto;
             padding: 60px 20px;
         }
-        
         .post-header {
             text-align: center;
             margin-bottom: 40px;
         }
-        
         .post-category {
             display: inline-block;
             background: linear-gradient(135deg, #667eea, #764ba2);
@@ -29,14 +27,12 @@
             font-size: 0.8rem;
             margin-bottom: 20px;
         }
-        
         .post-title {
             font-size: 2.5rem;
             color: #2d3748;
             margin-bottom: 20px;
             line-height: 1.2;
         }
-        
         .post-meta {
             display: flex;
             justify-content: center;
@@ -44,39 +40,16 @@
             color: #718096;
             margin-bottom: 30px;
         }
-        
         .post-content {
             font-size: 1.1rem;
             line-height: 1.8;
             color: #4a5568;
         }
-        
         .post-content h2 {
             color: #2d3748;
             margin: 40px 0 20px;
             font-size: 1.8rem;
         }
-        
-        .post-content h3 {
-            color: #2d3748;
-            margin: 30px 0 15px;
-            font-size: 1.4rem;
-        }
-        
-        .post-content p {
-            margin-bottom: 20px;
-        }
-        
-        .post-content ul {
-            margin: 20px 0;
-            padding-left: 30px;
-        }
-        
-        .post-content li {
-            margin-bottom: 10px;
-        }
-        
-        /* Conclusion Box */
         .conclusion-box {
             background: linear-gradient(135deg, #667eea10 0%, #764ba210 100%);
             border-left: 4px solid #667eea;
@@ -84,18 +57,6 @@
             margin: 40px 0 20px;
             border-radius: 15px;
         }
-        
-        .conclusion-box h3 {
-            margin-top: 0;
-            color: #667eea;
-            margin-bottom: 15px;
-        }
-        
-        .conclusion-box p {
-            margin-bottom: 0;
-        }
-        
-        /* Do's Box (Green) */
         .dos-box {
             background: #d4edda20;
             border-left: 4px solid #28a745;
@@ -103,21 +64,6 @@
             margin: 25px 0;
             border-radius: 10px;
         }
-        
-        .dos-box h3 {
-            margin-top: 0;
-            color: #28a745;
-        }
-        
-        .dos-box ul, .donts-box ul {
-            margin-bottom: 0;
-        }
-        
-        .dos-box li, .donts-box li {
-            margin-bottom: 12px;
-        }
-        
-        /* Don'ts Box (Red) */
         .donts-box {
             background: #f8d7da20;
             border-left: 4px solid #dc3545;
@@ -125,52 +71,19 @@
             margin: 25px 0;
             border-radius: 10px;
         }
-        
-        .donts-box h3 {
-            margin-top: 0;
-            color: #dc3545;
-        }
-        
-        /* Skills Grid for Telehealth Post */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 25px;
             margin: 30px 0;
         }
-        
         .skill-card {
             background: #f7fafc;
             padding: 25px;
             border-radius: 15px;
             text-align: center;
-            transition: all 0.3s;
             border: 1px solid #e2e8f0;
         }
-        
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-color: #667eea;
-        }
-        
-        .skill-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-        
-        .skill-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-            color: #2d3748;
-        }
-        
-        .skill-card p {
-            font-size: 0.95rem;
-            color: #718096;
-            line-height: 1.6;
-        }
-        
         .back-button {
             display: inline-flex;
             align-items: center;
@@ -182,21 +95,13 @@
             text-decoration: none;
             font-weight: 500;
             margin-bottom: 40px;
-            transition: all 0.3s;
         }
-        
-        .back-button:hover {
-            background: #e2e8f0;
-            transform: translateX(-5px);
-        }
-        
         .share-section {
             margin-top: 60px;
             padding-top: 40px;
             border-top: 2px solid #e2e8f0;
             text-align: center;
         }
-        
         .share-buttons {
             display: flex;
             gap: 15px;
@@ -204,7 +109,6 @@
             margin-top: 20px;
             flex-wrap: wrap;
         }
-        
         .share-btn {
             display: inline-block;
             padding: 10px 20px;
@@ -213,86 +117,32 @@
             font-weight: 500;
             transition: all 0.3s;
         }
-        
-        .share-twitter {
-            background: #1DA1F2;
-            color: white;
-        }
-        
-        .share-linkedin {
-            background: #0077B5;
-            color: white;
-        }
-        
-        .share-email {
-            background: #718096;
-            color: white;
-        }
-        
-        .share-btn:hover {
-            transform: translateY(-3px);
-        }
-        
-        /* Mobile Menu Toggle */
-        .menu-toggle {
+        .share-twitter { background: #1DA1F2; color: white; }
+        .share-linkedin { background: #0077B5; color: white; }
+        .share-email { background: #718096; color: white; }
+        .share-btn:hover { transform: translateY(-3px); }
+        .debug-info {
+            background: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 12px;
             display: none;
-            flex-direction: column;
-            cursor: pointer;
         }
-        
-        .menu-toggle span {
-            width: 25px;
-            height: 3px;
-            background: #2d3748;
-            margin: 3px 0;
-            transition: 0.3s;
+        .error-message {
+            text-align: center;
+            padding: 40px;
+            background: #f8d7da;
+            border-radius: 10px;
+            margin: 20px;
         }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .post-title {
-                font-size: 1.8rem;
-            }
-            
-            .post-meta {
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-            }
-            
-            .skills-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .menu-toggle {
-                display: flex;
-            }
-            
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: white;
-                flex-direction: column;
-                padding: 20px;
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            }
-            
-            .nav-links.active {
-                display: flex;
-            }
-            
-            .nav-links a {
-                margin: 10px 0;
-            }
+        .error-message a {
+            color: #667eea;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation Menu -->
     <nav>
         <div class="nav-container">
             <a href="index.html" class="logo">
@@ -314,35 +164,17 @@
         </div>
     </nav>
 
-    <!-- Blog Post Content -->
     <div class="container">
         <a href="blog.html" class="back-button">← Back to Blog</a>
         
         <div class="post-container" id="postContainer">
-            <div class="post-header">
-                <span class="post-category" id="postCategory">Loading...</span>
-                <h1 class="post-title" id="postTitle">Loading...</h1>
-                <div class="post-meta">
-                    <span id="postDate">📅 Loading...</span>
-                    <span id="postReadTime">⏱️ Loading...</span>
-                </div>
-            </div>
-            <div class="post-content" id="postContent">
-                Loading...
-            </div>
-            
-            <div class="share-section">
-                <h3>Share This Article</h3>
-                <div class="share-buttons">
-                    <a href="#" class="share-btn share-twitter" id="shareTwitter">🐦 Twitter</a>
-                    <a href="#" class="share-btn share-linkedin" id="shareLinkedin">💼 LinkedIn</a>
-                    <a href="#" class="share-btn share-email" id="shareEmail">📧 Email</a>
-                </div>
+            <div id="debugInfo" class="debug-info"></div>
+            <div id="postContent">
+                <p style="text-align: center;">Loading post...</p>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -362,7 +194,6 @@
                     <h4>Connect With Us</h4>
                     <p>📧 dtech-nurse@gmail.com</p>
                     <p>🎵 @dtechnurse on TikTok</p>
-                    <p>💼 LinkedIn (Coming Soon)</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -371,45 +202,101 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
     <script>
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
-        
-        if (menuToggle) {
-            menuToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-            });
+        // Debug function to show information
+        function debugLog(message) {
+            console.log(message);
+            const debugDiv = document.getElementById('debugInfo');
+            if (debugDiv) {
+                debugDiv.style.display = 'block';
+                debugDiv.innerHTML += new Date().toLocaleTimeString() + ': ' + message + '<br>';
+            }
         }
         
         // Load post data
         function loadPost() {
-            const postData = localStorage.getItem('currentPost');
+            debugLog('post.html loaded - checking localStorage');
             
-            if (postData) {
-                const post = JSON.parse(postData);
-                
-                document.getElementById('postCategory').textContent = post.category;
-                document.getElementById('postTitle').textContent = post.title;
-                document.getElementById('postDate').innerHTML = `📅 ${post.date}`;
-                document.getElementById('postReadTime').innerHTML = `⏱️ ${post.readTime}`;
-                document.getElementById('postContent').innerHTML = post.content;
-                
-                // Update page title
-                document.title = `${post.title} - D-Tech Nurse`;
-                
-                // Setup share buttons
-                const shareUrl = encodeURIComponent(window.location.href);
-                const shareTitle = encodeURIComponent(post.title);
-                
-                document.getElementById('shareTwitter').href = `https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}`;
-                document.getElementById('shareLinkedin').href = `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`;
-                document.getElementById('shareEmail').href = `mailto:?subject=${shareTitle}&body=Check out this article: ${shareUrl}`;
+            // Check what's in localStorage
+            const allKeys = Object.keys(localStorage);
+            debugLog('Items in localStorage: ' + allKeys.join(', '));
+            
+            const postData = localStorage.getItem('currentPost');
+            debugLog('Raw postData: ' + (postData ? postData.substring(0, 100) + '...' : 'NULL'));
+            
+            if (postData && postData !== 'undefined' && postData !== 'null') {
+                try {
+                    const post = JSON.parse(postData);
+                    debugLog('Successfully parsed post: ' + post.title);
+                    
+                    // Build the HTML
+                    let html = `
+                        <div class="post-header">
+                            <span class="post-category">${post.category || 'General'}</span>
+                            <h1 class="post-title">${post.title || 'Untitled'}</h1>
+                            <div class="post-meta">
+                                <span>📅 ${post.date || 'Unknown date'}</span>
+                                <span>⏱️ ${post.readTime || 'Unknown'}</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            ${post.content || '<p>No content available.</p>'}
+                        </div>
+                        <div class="share-section">
+                            <h3>Share This Article</h3>
+                            <div class="share-buttons">
+                                <a href="#" class="share-btn share-twitter" id="shareTwitter">🐦 Twitter</a>
+                                <a href="#" class="share-btn share-linkedin" id="shareLinkedin">💼 LinkedIn</a>
+                                <a href="#" class="share-btn share-email" id="shareEmail">📧 Email</a>
+                            </div>
+                        </div>
+                    `;
+                    
+                    document.getElementById('postContent').innerHTML = html;
+                    document.title = `${post.title || 'Blog Post'} - D-Tech Nurse`;
+                    
+                    // Setup share buttons
+                    const shareUrl = encodeURIComponent(window.location.href);
+                    const shareTitle = encodeURIComponent(post.title || 'D-Tech Nurse Post');
+                    
+                    const twitterBtn = document.getElementById('shareTwitter');
+                    const linkedinBtn = document.getElementById('shareLinkedin');
+                    const emailBtn = document.getElementById('shareEmail');
+                    
+                    if (twitterBtn) twitterBtn.href = `https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}`;
+                    if (linkedinBtn) linkedinBtn.href = `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`;
+                    if (emailBtn) emailBtn.href = `mailto:?subject=${shareTitle}&body=Check out this article: ${shareUrl}`;
+                    
+                    debugLog('Post displayed successfully');
+                } catch (e) {
+                    debugLog('ERROR parsing post: ' + e.message);
+                    showError('Failed to parse post data: ' + e.message);
+                }
             } else {
-                // No post found, redirect to blog
-                window.location.href = 'blog.html';
+                debugLog('ERROR: No post data found in localStorage');
+                showError('No post found. Please go back to the blog page and try again.');
             }
+        }
+        
+        function showError(message) {
+            document.getElementById('postContent').innerHTML = `
+                <div class="error-message">
+                    <h3>⚠️ Unable to Load Post</h3>
+                    <p>${message}</p>
+                    <p><a href="blog.html">← Return to Blog</a></p>
+                    <hr>
+                    <p style="font-size: 12px;">Debug info: Check browser console (F12)</p>
+                </div>
+            `;
+        }
+        
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
         }
         
         // Load post when page loads
