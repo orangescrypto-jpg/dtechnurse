@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - D-Tech Nurse</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">💊</span>
+                D-Tech Nurse
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>D-Tech Nurse Blog</h1>
+            <p>Insights, tutorials, and news at the intersection of nursing and technology</p>
+        </div>
+    </section>
+
+    <!-- Blog Posts Section -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-grid" id="blog-posts">
+                <!-- Blog posts will be loaded here -->
+                <div class="loading-spinner">Loading posts...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>D-Tech Nurse</h3>
+                    <p>Bridging healthcare and technology for a better future.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="privacy.html">Privacy</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <p>📧 dtech-nurse@gmail.com</p>
+                    <p>🎵 @dtechnurse on TikTok</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 D-Tech Nurse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Blog posts data
+        const blogPosts = [
+            {
+                id: 1,
+                title: "Getting Started with Electronic Health Records (EHR)",
+                date: "April 14, 2026",
+                category: "EHR Systems",
+                excerpt: "Learn the basics of Electronic Health Records and how they're transforming patient care. A beginner's guide for nurses.",
+                content: `
+                    <h2>What Are Electronic Health Records?</h2>
+                    <p>Electronic Health Records (EHR) are digital versions of patients' paper charts. They contain medical history, diagnoses, medications, treatment plans, immunization dates, allergies, radiology images, and laboratory test results.</p>
+                    
+                    <h2>Why EHR Matters for Nurses</h2>
+                    <p>As a nurse, you'll spend significant time working with EHR systems. Understanding them is crucial for efficient patient care and documentation.</p>
+                    
+                    <h2>Tips for Success</h2>
+                    <ul>
+                        <li>Take advantage of training sessions</li>
+                        <li>Practice in test environments</li>
+                        <li>Learn keyboard shortcuts</li>
+                        <li>Stay updated with system changes</li>
+                    </ul>
+                    
+                    <p>Remember: EHRs are tools to enhance patient care, not replace clinical judgment!</p>
+                `,
+                readTime: "5 min read"
+            },
+            {
+                id: 2,
+                title: "5 Essential Apps Every Nurse Should Have",
+                date: "April 10, 2026",
+                category: "Mobile Apps",
+                excerpt: "Discover the best mobile applications that can help you stay organized, calculate dosages, and access medical references instantly.",
+                content: `
+                    <h2>Must-Have Apps for Modern Nurses</h2>
+                    
+                    <h3>1. MedCalc</h3>
+                    <p>Perfect for quick medical calculations, IV drip rates, and drug dosage conversions.</p>
+                    
+                    <h3>2. Epocrates</h3>
+                    <p>Drug information, interaction checker, and pill identifier all in one app.</p>
+                    
+                    <h3>3. Nursing Central</h3>
+                    <p>Comprehensive resource with disease information, drug guides, and lab values.</p>
+                    
+                    <h3>4. GoodNotes</h3>
+                    <p>Great for taking organized notes during shifts and study sessions.</p>
+                    
+                    <h3>5. UpToDate</h3>
+                    <p>Evidence-based clinical decision support at your fingertips.</p>
+                    
+                    <p>These apps can save time and improve accuracy in your daily practice!</p>
+                `,
+                readTime: "4 min read"
+            },
+            {
+                id: 3,
+                title: "Understanding HIPAA in the Digital Age",
+                date: "April 5, 2026",
+                category: "Privacy & Security",
+                excerpt: "How to protect patient privacy while using modern technology. Essential guidelines for every healthcare professional.",
+                content: `
+                    <h2>HIPAA in 2026: What's Changed?</h2>
+                    <p>The digital transformation of healthcare brings new challenges for patient privacy. Here's what you need to know.</p>
+                    
+                    <h2>Digital Do's and Don'ts</h2>
+                    <ul>
+                        <li>✅ Use encrypted messaging for patient communication</li>
+                        <li>✅ Enable two-factor authentication on all work devices</li>
+                        <li>❌ Never discuss patient info on personal social media</li>
+                        <li>❌ Don't take photos of patients on personal phones</li>
+                    </ul>
+                    
+                    <h2>Best Practices</h2>
+                    <p>Always log out of systems when away from your workstation. Use secure networks for accessing patient data. Report any potential breaches immediately.</p>
+                    
+                    <p>Patient trust depends on our commitment to privacy!</p>
+                `,
+                readTime: "6 min read"
+            },
+            {
+                id: 4,
+                title: "Telehealth: The Future of Nursing is Here",
+                date: "March 28, 2026",
+                category: "Telehealth",
+                excerpt: "How telenursing is expanding access to care and creating new opportunities for nurses.",
+                content: `
+                    <h2>The Rise of Telehealth Nursing</h2>
+                    <p>Telehealth has revolutionized how patients receive care. As a telenurse, you can assess patients, provide education, and coordinate care remotely.</p>
+                    
+                    <h2>Skills Needed for Telenursing</h2>
+                    <ul>
+                        <li>Strong communication skills</li>
+                        <li>Comfort with video conferencing tools</li>
+                        <li>Ability to assess patients virtually</li>
+                        <li>Documentation in EHR systems</li>
+                    </ul>
+                    
+                    <h2>Getting Started</h2>
+                    <p>Many healthcare systems now offer telehealth positions. Look for opportunities to cross-train or take continuing education courses in telehealth nursing.</p>
+                    
+                    <p>The future of nursing is flexible, digital, and patient-centered!</p>
+                `,
+                readTime: "5 min read"
+            },
+            {
+                id: 5,
+                title: "Artificial Intelligence in Nursing: Friend or Foe?",
+                date: "March 20, 2026",
+                category: "AI in Healthcare",
+                excerpt: "Exploring how AI is changing nursing practice and why you shouldn't be afraid of it.",
+                content: `
+                    <h2>AI is Here to Help, Not Replace</h2>
+                    <p>Artificial Intelligence is transforming healthcare, but nurses remain irreplaceable. AI handles data; nurses provide compassion.</p>
+                    
+                    <h2>How AI Helps Nurses</h2>
+                    <ul>
+                        <li>Predictive analytics for patient deterioration</li>
+                        <li>Automated documentation assistance</li>
+                        <li>Smart scheduling and staffing</li>
+                        <li>Clinical decision support</li>
+                    </ul>
+                    
+                    <h2>Embracing the Change</h2>
+                    <p>Learn basic AI concepts and how they apply to healthcare. The nurses who adapt will thrive in the AI-enhanced future of medicine.</p>
+                    
+                    <p>Your clinical judgment + AI insights = Better patient outcomes!</p>
+                `,
+                readTime: "7 min read"
+            },
+            {
+                id: 6,
+                title: "Time Management Tips for Tech-Savvy Nurses",
+                date: "March 15, 2026",
+                category: "Productivity",
+                excerpt: "Use technology to work smarter, not harder. Productivity tools and techniques for busy nurses.",
+                content: `
+                    <h2>Work Smarter, Not Harder</h2>
+                    <p>Technology can be your best friend for managing a busy nursing schedule. Here's how to leverage it effectively.</p>
+                    
+                    <h2>Digital Tools to Try</h2>
+                    <ul>
+                        <li><strong>Trello/Asana:</strong> Track tasks and to-do lists</li>
+                        <li><strong>Google Calendar:</strong> Schedule shifts and appointments</li>
+                        <li><strong>Evernote/OneNote:</strong> Organize notes and resources</li>
+                        <li><strong>Pomodoro Timer:</strong> Stay focused during charting</li>
+                    </ul>
+                    
+                    <h2>Quick Tips</h2>
+                    <p>Batch similar tasks together. Use templates for common documentation. Set reminders for important deadlines.</p>
+                    
+                    <p>Technology should simplify your life, not complicate it!</p>
+                `,
+                readTime: "4 min read"
+            }
+        ];
+
+        // Function to display blog posts
+        function displayBlogPosts() {
+            const blogGrid = document.getElementById('blog-posts');
+            
+            if (!blogGrid) return;
+            
+            let postsHTML = '';
+            
+            blogPosts.forEach(post => {
+                postsHTML += `
+                    <div class="blog-card" onclick="openPost(${post.id})">
+                        <div class="blog-card-header">
+                            <span class="blog-category">${post.category}</span>
+                            <span class="blog-date">${post.date}</span>
+                        </div>
+                        <h3 class="blog-title">${post.title}</h3>
+                        <p class="blog-excerpt">${post.excerpt}</p>
+                        <div class="blog-footer">
+                            <span class="blog-read-time">⏱️ ${post.readTime}</span>
+                            <span class="read-more">Read More →</span>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            blogGrid.innerHTML = postsHTML;
+        }
+        
+        // Function to open individual post
+        function openPost(postId) {
+            const post = blogPosts.find(p => p.id === postId);
+            if (post) {
+                // Store post data in localStorage
+                localStorage.setItem('currentPost', JSON.stringify(post));
+                // Open post page
+                window.location.href = 'post.html';
+            }
+        }
+        
+        // Display posts when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            displayBlogPosts();
+        });
+    </script>
+</body>
+</html>
