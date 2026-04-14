@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Menu -->
     <nav>
         <div class="nav-container">
             <a href="index.html" class="logo">
@@ -32,7 +31,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -55,7 +53,6 @@
         </div>
     </section>
 
-    <!-- Features Section -->
     <section class="features">
         <div class="container">
             <div class="section-header">
@@ -87,7 +84,6 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
     <section class="stats">
         <div class="container">
             <div class="stats-grid">
@@ -111,7 +107,6 @@
         </div>
     </section>
 
-    <!-- Latest Blog Posts Section -->
     <section class="latest-blog">
         <div class="container">
             <div class="section-header">
@@ -125,7 +120,6 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="cta">
         <div class="container">
             <div class="cta-content">
@@ -136,7 +130,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -156,7 +149,6 @@
                     <h4>Connect With Us</h4>
                     <p>📧 dtech-nurse@gmail.com</p>
                     <p>🎵 @dtechnurse on TikTok</p>
-                    <p>💼 LinkedIn (Coming Soon)</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -168,14 +160,11 @@
     <script src="js/posts-data.js"></script>
     <script src="js/script.js"></script>
     <script>
-        // Display latest 4 posts on homepage (using data from posts-data.js)
         function displayLatestPosts() {
             const container = document.getElementById('latest-posts');
             if (!container) return;
             
-            // Get latest 4 posts
             const latestPosts = allBlogPosts.slice(0, 4);
-            
             let html = '';
             for (let i = 0; i < latestPosts.length; i++) {
                 const post = latestPosts[i];
@@ -197,7 +186,6 @@
             container.innerHTML = html;
         }
         
-        // Open post (uses global allBlogPosts from posts-data.js)
         function openPost(postId) {
             const post = allBlogPosts.find(p => p.id === postId);
             if (post) {
@@ -206,10 +194,8 @@
             }
         }
         
-        // Run when page loads
         displayLatestPosts();
         
-        // Mobile menu
         const menuToggle = document.getElementById('mobile-menu');
         const navLinks = document.querySelector('.nav-links');
         if (menuToggle) {
@@ -218,7 +204,6 @@
             });
         }
         
-        // Animated stats (keep your existing code)
         const stats = document.querySelectorAll('.stat-number');
         const animateNumbers = () => {
             stats.forEach(stat => {
