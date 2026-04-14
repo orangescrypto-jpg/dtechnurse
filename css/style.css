@@ -611,6 +611,24 @@ footer {
     animation: float 3s ease-in-out infinite;
 }
 
+/* About Page Image */
+.mission-image {
+    text-align: center;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.about-image:hover {
+    transform: scale(1.02);
+}
+
 /* What We Do Section */
 .what-we-do {
     padding: 80px 0;
@@ -982,30 +1000,10 @@ footer {
     .faq-grid {
         grid-template-columns: 1fr;
     }
-}
-/* About Page Image */
-.mission-image {
-    text-align: center;
-}
-
-.about-image {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-    object-fit: cover;
-}
-
-.about-image:hover {
-    transform: scale(1.02);
-}
-
-/* Responsive for mobile */
-@media (max-width: 768px) {
+    
+    /* About page image responsive */
     .about-image {
         max-width: 200px;
         margin-top: 20px;
     }
-                                 }
-
+}
