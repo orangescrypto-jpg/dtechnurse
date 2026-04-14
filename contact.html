@@ -3,79 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - D-Tech Nurse</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Message Sent - D-Tech Nurse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .thank-you-container {
+            text-align: center;
+            padding: 20px;
+        }
+        .thank-you-card {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 50px;
+            border-radius: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        .thank-you-card .emoji {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        .thank-you-card h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+        .thank-you-card p {
+            color: #718096;
+            margin-bottom: 10px;
+        }
+        .btn-home {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 30px;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+        .btn-home:hover {
+            transform: translateY(-3px);
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation Menu -->
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo">D-Tech Nurse</a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-                <a href="privacy.html">Privacy</a>
-            </div>
+    <div class="thank-you-container">
+        <div class="thank-you-card">
+            <div class="emoji">📧✨</div>
+            <h1>Thank You!</h1>
+            <p>Your message has been sent successfully.</p>
+            <p>We'll get back to you within 24-48 hours.</p>
+            <a href="index.html" class="btn-home">Return to Homepage →</a>
         </div>
-    </nav>
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Contact Me</h1>
-            <p>Get in touch with me</p>
-        </div>
-    </section>
-
-    <!-- Contact Content -->
-    <main>
-        <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h2>Let's Connect</h2>
-                    <p>Have questions or want to collaborate? Reach out to me!</p>
-                    
-                    <div class="contact-details">
-                        <p><strong>📧 Email:</strong> dtechnurse@gmail.com</p>
-                        <p><strong>📱 Social Media:</strong> Coming soon</p>
-                        <p><strong>📍 Location:</strong> Online</p>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <h2>Send a Message</h2>
-                    <form action="#" method="POST">
-                        <div class="form-group">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message:</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                    <p class="form-note">* For now, please use the email address above. Contact form coming soon!</p>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 D-Tech Nurse. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
+    </div>
 </body>
 </html>
