@@ -543,4 +543,118 @@ footer {
     .contact-wrapper {
         flex-direction: column;
     }
+/* Latest Blog Section */
+.latest-blog {
+    padding: 80px 0;
+    background: #f7fafc;
+}
+
+.blog-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    transition: all 0.3s;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.blog-category {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.blog-date {
+    color: #718096;
+    font-size: 0.8rem;
+}
+
+.blog-title {
+    font-size: 1.3rem;
+    color: #2d3748;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.blog-excerpt {
+    color: #718096;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.blog-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog-read-time {
+    color: #a0aec0;
+    font-size: 0.85rem;
+}
+
+.read-more {
+    color: #667eea;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.blog-card:hover .read-more {
+    color: #764ba2;
+}
+
+.view-all-container {
+    text-align: center;
+}
+
+.loading-spinner {
+    text-align: center;
+    padding: 40px;
+    color: #718096;
+}
+
+/* Blog Page Styles */
+.blog-section {
+    padding: 60px 0;
+    background: #f7fafc;
+    min-height: 60vh;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .blog-preview-grid, .blog-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .blog-title {
+        font-size: 1.1rem;
+    }
 }
