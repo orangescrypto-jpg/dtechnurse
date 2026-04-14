@@ -5,17 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - D-Tech Nurse</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation Menu -->
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo">D-Tech Nurse</a>
+            <a href="index.html" class="logo">
+                <span class="logo-icon">💊</span>
+                D-Tech Nurse
+            </a>
             <div class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="about.html">About</a>
+                <a href="about.html" class="active">About</a>
+                <a href="blog.html">Blog</a>
                 <a href="contact.html">Contact</a>
                 <a href="privacy.html">Privacy</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>
@@ -23,41 +35,165 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>About Me</h1>
-            <p>Learn more about D-Tech Nurse</p>
+            <h1>About D-Tech Nurse</h1>
+            <p>Bridging healthcare and technology for a better future</p>
         </div>
     </section>
 
-    <!-- About Content -->
-    <main>
+    <!-- Mission Section -->
+    <section class="mission-section">
         <div class="container">
-            <div class="about-content">
-                <h2>Who I Am</h2>
-                <p>I'm a nurse who is passionate about technology and how it can transform healthcare. D-Tech Nurse was created to help other healthcare professionals embrace technology in their daily practice.</p>
-                
-                <h2>What I Do</h2>
-                <p>I provide resources, tutorials, and insights about:</p>
-                <ul>
-                    <li>Electronic Health Records (EHR)</li>
-                    <li>Healthcare apps and tools</li>
-                    <li>Digital patient engagement</li>
-                    <li>Telehealth and remote care</li>
-                    <li>Data privacy and security</li>
-                </ul>
-                
-                <h2>My Mission</h2>
-                <p>To bridge the gap between nursing and technology, empowering nurses to use digital tools effectively and safely.</p>
+            <div class="mission-grid">
+                <div class="mission-content">
+                    <span class="section-tag">Our Mission</span>
+                    <h2>Empowering Nurses Through Technology</h2>
+                    <p>At D-Tech Nurse, we believe that technology should enhance, not complicate, healthcare. Our mission is to equip nurses and healthcare professionals with the digital skills they need to thrive in the modern medical landscape.</p>
+                    <div class="mission-stats">
+                        <div class="mini-stat">
+                            <span class="mini-number">5000+</span>
+                            <span class="mini-label">Nurses Reached</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-number">100+</span>
+                            <span class="mini-label">Resources Created</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-number">15+</span>
+                            <span class="mini-label">Countries</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mission-icon">
+                    <div class="icon-circle">👩‍⚕️💻</div>
+                </div>
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="what-we-do">
+        <div class="container">
+            <div class="section-header">
+                <h2>What We Do</h2>
+                <p>Making technology accessible for every nurse</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">📚</div>
+                    <h3>Educational Content</h3>
+                    <p>Tutorials, guides, and resources about EHR systems, healthcare apps, and digital tools.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🎓</div>
+                    <h3>Training Programs</h3>
+                    <p>Workshops and courses designed specifically for nursing professionals.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">💡</div>
+                    <h3>Tech Insights</h3>
+                    <p>Latest trends in telehealth, AI in healthcare, and nursing informatics.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🤝</div>
+                    <h3>Community Support</h3>
+                    <p>A supportive community of tech-savvy healthcare professionals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-image">
+                    <div class="story-emoji">💻🏥</div>
+                </div>
+                <div class="story-content">
+                    <span class="section-tag">Our Story</span>
+                    <h2>From Nursing to Technology</h2>
+                    <p>D-Tech Nurse was born from a simple observation: many nurses feel left behind in the digital transformation of healthcare. As a nurse who experienced this challenge firsthand, I decided to create a resource that bridges this gap.</p>
+                    <p>What started as a personal blog has grown into a community of thousands of healthcare professionals who want to embrace technology confidently. We're here to prove that you don't need to be a tech expert to use technology effectively in your nursing practice.</p>
+                    <div class="signature">
+                        <p>— The D-Tech Nurse Team</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Core Values</h2>
+                <p>Guiding principles that drive everything we do</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3>Accessibility</h3>
+                    <p>Making technology understandable for every nurse, regardless of their tech background.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🔒</div>
+                    <h3>Privacy First</h3>
+                    <p>Patient data protection and HIPAA compliance are at the heart of what we teach.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>Community</h3>
+                    <p>Building a supportive network where nurses help each other succeed.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">📈</div>
+                    <h3>Growth</h3>
+                    <p>Continuously learning and adapting to new technologies and best practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Tech Journey?</h2>
+                <p>Join thousands of nurses who are embracing technology to provide better patient care.</p>
+                <a href="contact.html" class="btn btn-primary">Get in Touch →</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 D-Tech Nurse. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>D-Tech Nurse</h3>
+                    <p>Bridging healthcare and technology for a better future.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="privacy.html">Privacy</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <p>📧 dtech-nurse@gmail.com</p>
+                    <p>🎵 @dtechnurse on TikTok</p>
+                    <p>💼 LinkedIn (Coming Soon)</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 D-Tech Nurse. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
 </body>
-                                 </html>
+</html>
