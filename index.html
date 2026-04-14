@@ -165,5 +165,104 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        // Blog posts data for homepage
+        const latestPosts = [
+            {
+                id: 1,
+                title: "Getting Started with Electronic Health Records (EHR)",
+                date: "April 14, 2026",
+                category: "EHR Systems",
+                excerpt: "Learn the basics of Electronic Health Records and how they're transforming patient care...",
+                readTime: "5 min read"
+            },
+            {
+                id: 2,
+                title: "5 Essential Apps Every Nurse Should Have",
+                date: "April 10, 2026",
+                category: "Mobile Apps",
+                excerpt: "Discover the best mobile applications that can help you stay organized, calculate dosages...",
+                readTime: "4 min read"
+            },
+            {
+                id: 3,
+                title: "Understanding HIPAA in the Digital Age",
+                date: "April 5, 2026",
+                category: "Privacy & Security",
+                excerpt: "How to protect patient privacy while using modern technology. Essential guidelines...",
+                readTime: "6 min read"
+            }
+        ];
+
+        function displayLatestPosts() {
+            const postsContainer = document.getElementById('latest-posts');
+            if (!postsContainer) return;
+            
+            let postsHTML = '';
+            
+            latestPosts.forEach(post => {
+                postsHTML += `
+                    <div class="blog-card" onclick="openPost(${post.id})">
+                        <div class="blog-card-header">
+                            <span class="blog-category">${post.category}</span>
+                            <span class="blog-date">${post.date}</span>
+                        </div>
+                        <h3 class="blog-title">${post.title}</h3>
+                        <p class="blog-excerpt">${post.excerpt}</p>
+                        <div class="blog-footer">
+                            <span class="blog-read-time">⏱️ ${post.readTime}</span>
+                            <span class="read-more">Read More →</span>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            postsContainer.innerHTML = postsHTML;
+        }
+        
+        function openPost(postId) {
+            // Full blog posts data (same as in blog.html)
+            const allPosts = [
+                {
+                    id: 1,
+                    title: "Getting Started with Electronic Health Records (EHR)",
+                    date: "April 14, 2026",
+                    category: "EHR Systems",
+                    excerpt: "Learn the basics of Electronic Health Records and how they're transforming patient care...",
+                    content: `<h2>What Are Electronic Health Records?</h2><p>Electronic Health Records (EHR) are digital versions of patients' paper charts...</p>`,
+                    readTime: "5 min read"
+                },
+                {
+                    id: 2,
+                    title: "5 Essential Apps Every Nurse Should Have",
+                    date: "April 10, 2026",
+                    category: "Mobile Apps",
+                    excerpt: "Discover the best mobile applications that can help you stay organized...",
+                    content: `<h2>Must-Have Apps for Modern Nurses</h2><p>Perfect for quick medical calculations...</p>`,
+                    readTime: "4 min read"
+                },
+                {
+                    id: 3,
+                    title: "Understanding HIPAA in the Digital Age",
+                    date: "April 5, 2026",
+                    category: "Privacy & Security",
+                    excerpt: "How to protect patient privacy while using modern technology...",
+                    content: `<h2>HIPAA in 2026: What's Changed?</h2><p>The digital transformation of healthcare brings new challenges...</p>`,
+                    readTime: "6 min read"
+                }
+            ];
+            
+            const post = allPosts.find(p => p.id === postId);
+            if (post) {
+                localStorage.setItem('currentPost', JSON.stringify(post));
+                window.location.href = 'post.html';
+            }
+        }
+        
+        // Display posts when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            displayLatestPosts();
+        });
+    </script>
 </body>
 </html>
