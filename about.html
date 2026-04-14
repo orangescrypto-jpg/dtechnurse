@@ -50,34 +50,30 @@
                     <p>At DTECH-NURSE, we believe that technology should enhance, not complicate, healthcare. Our mission is to equip nurses and healthcare professionals with the digital skills they need to thrive in the modern medical landscape.</p>
                     <div class="mission-stats">
                         <div class="mini-stat">
-                            <span class="mini-number">5000+</span>
-                            <span class="mini-label">Nurses Reached</span>
-                        </div>
-                        <div class="mini-stat">
-                            <span class="mini-number">50+</span>
-                            <span class="mini-label">Resources Created</span>
-                        </div>
-                        <div class="mini-stat">
                             <span class="mini-number">10+</span>
                             <span class="mini-label">Countries</span>
                         </div>
+                        <div class="mini-stat">
+                            <span class="mini-number">Pending</span>
+                            <span class="mini-label">Resources Created</span>
+                        </div>
                     </div>
-                </div>
-                <div class="mission-image">
-                    <img src="images/IMG-20260414-WA0043.jpg" alt="Nurse Mojisola - Founder of DTECH-NURSE" class="about-image">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About the Founder Section -->
+    <!-- About the Founder Section with Image -->
     <section class="founder-section">
         <div class="container">
             <div class="section-header">
                 <h2>About the Founder</h2>
                 <p>Meet the visionary behind DTECH-NURSE</p>
             </div>
-            <div class="founder-content">
+            <div class="founder-wrapper">
+                <div class="founder-image">
+                    <img src="images/IMG-20260414-WA0043.jpg" alt="Nurse Mojisola - Founder of DTECH-NURSE" class="founder-img">
+                </div>
                 <div class="founder-text">
                     <p><strong>Nurse Mojisola</strong>, popularly known as <strong>DTECHNURSE</strong>, is the visionary founder of DTECHNURSELTD. She is a passionate nurse with a strong interest in the intersection of healthcare and technology.</p>
                     
@@ -136,7 +132,7 @@
                     <span class="section-tag">Our Story</span>
                     <h2>From Nursing to Technology</h2>
                     <p>DTECH-NURSE was born from a simple observation: many nurses feel left behind in the digital transformation of healthcare. As a nurse who experienced this challenge firsthand, I decided to create a resource that bridges this gap.</p>
-                    <p>What started as a personal blog has grown into a community of thousands of healthcare professionals who want to embrace technology confidently. We're here to prove that you don't need to be a tech expert to use technology effectively in your nursing practice.</p>
+                    <p>What started as a personal blog has grown into a community of healthcare professionals who want to embrace technology confidently. We're here to prove that you don't need to be a tech expert to use technology effectively in your nursing practice.</p>
                     <div class="signature">
                         <p>— Nurse Mojisola, Founder</p>
                     </div>
@@ -182,7 +178,7 @@
         <div class="container">
             <div class="cta-content">
                 <h2>Ready to Start Your Tech Journey?</h2>
-                <p>Join thousands of nurses who are embracing technology to provide better patient care.</p>
+                <p>Join nurses who are embracing technology to provide better patient care.</p>
                 <a href="contact.html" class="btn btn-primary">Get in Touch →</a>
             </div>
         </div>
@@ -225,18 +221,36 @@
             background: white;
         }
         
-        .founder-content {
-            max-width: 900px;
+        .founder-wrapper {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+            max-width: 1000px;
             margin: 0 auto;
         }
         
-        .founder-text {
-            background: #f7fafc;
-            padding: 40px;
+        .founder-image {
+            flex: 0 0 280px;
+            text-align: center;
+        }
+        
+        .founder-img {
+            width: 100%;
+            max-width: 280px;
             border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+            object-fit: cover;
+        }
+        
+        .founder-img:hover {
+            transform: scale(1.02);
+        }
+        
+        .founder-text {
+            flex: 1;
             line-height: 1.8;
             color: #4a5568;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
         }
         
         .founder-text p {
@@ -251,9 +265,53 @@
             color: #667eea;
         }
         
+        /* Mission Stats Updated */
+        .mission-stats {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .mini-stat {
+            text-align: center;
+            background: #f7fafc;
+            padding: 15px 25px;
+            border-radius: 15px;
+            min-width: 120px;
+        }
+        
+        .mini-number {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #667eea;
+        }
+        
+        .mini-label {
+            color: #718096;
+            font-size: 0.8rem;
+        }
+        
+        /* Responsive */
         @media (max-width: 768px) {
-            .founder-text {
-                padding: 25px;
+            .founder-wrapper {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .founder-image {
+                flex: 0 0 auto;
+                margin-bottom: 30px;
+            }
+            
+            .founder-img {
+                max-width: 220px;
+            }
+            
+            .mission-stats {
+                justify-content: center;
             }
         }
     </style>
