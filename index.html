@@ -160,11 +160,20 @@
     <script src="js/posts-data.js"></script>
     <script src="js/script.js"></script>
     <script>
+        // Display latest 4 posts on homepage (using data from posts-data.js)
         function displayLatestPosts() {
             const container = document.getElementById('latest-posts');
             if (!container) return;
             
-            const latestPosts = allBlogPosts.slice(0, 4);
+            // Check if allBlogPosts exists from posts-data.js
+            if (typeof allBlogPosts === 'undefined') {
+                container.innerHTML = '<p class="loading-spinner">Error loading posts. Please refresh.</p>';
+                return;
+            }
+            
+            // Get the 4 most recent posts (show newest first)
+            const latestPosts = [...allBlogPosts].reverse().slice(0, 4);
+            
             let html = '';
             for (let i = 0; i < latestPosts.length; i++) {
                 const post = latestPosts[i];
@@ -186,6 +195,7 @@
             container.innerHTML = html;
         }
         
+        // Open post - uses the full content from posts-data.js
         function openPost(postId) {
             const post = allBlogPosts.find(p => p.id === postId);
             if (post) {
@@ -194,8 +204,12 @@
             }
         }
         
-        displayLatestPosts();
+        // Run when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            displayLatestPosts();
+        });
         
+        // Mobile menu
         const menuToggle = document.getElementById('mobile-menu');
         const navLinks = document.querySelector('.nav-links');
         if (menuToggle) {
@@ -204,6 +218,7 @@
             });
         }
         
+        // Animated stats
         const stats = document.querySelectorAll('.stat-number');
         const animateNumbers = () => {
             stats.forEach(stat => {
