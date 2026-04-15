@@ -157,28 +157,72 @@
         </div>
     </footer>
 
-    <script src="js/posts-data.js"></script>
-    <script src="js/script.js"></script>
     <script>
-        // Display latest 4 posts on homepage (using data from posts-data.js)
+        // Blog posts data for homepage (showing only previews, no full content)
+        const blogPosts = [
+            {
+                id: 1,
+                title: "What Are Electronic Health Records (EHR)",
+                date: "April 14, 2026",
+                category: "EHR Systems",
+                excerpt: "Electronic Health Records are digital versions of traditional paper charts. Learn why EHR matters for nurses and how to succeed with these essential systems.",
+                readTime: "6 min read"
+            },
+            {
+                id: 2,
+                title: "Must Have Apps for Modern Nurses",
+                date: "April 10, 2026",
+                category: "Mobile Apps",
+                excerpt: "Being a nurse today goes far beyond clinical skills alone. Discover the essential digital tools that can make your work easier, safer, and more efficient.",
+                readTime: "6 min read"
+            },
+            {
+                id: 3,
+                title: "HIPAA in 2026: What Has Changed",
+                date: "April 5, 2026",
+                category: "Privacy & Security",
+                excerpt: "Healthcare has changed with technology at the center of patient care. Learn how HIPAA protects patient privacy in our digital world.",
+                readTime: "7 min read"
+            },
+            {
+                id: 4,
+                title: "The Rise of Telehealth Nursing",
+                date: "March 28, 2026",
+                category: "Telehealth",
+                excerpt: "Healthcare is no longer limited to hospital walls. Discover how telenursing is transforming patient care.",
+                readTime: "6 min read"
+            },
+            {
+                id: 5,
+                title: "Work Smarter Not Harder",
+                date: "March 20, 2026",
+                category: "Productivity",
+                excerpt: "Use technology to take control of your time and work more efficiently. Learn digital tools and tips for busy nurses.",
+                readTime: "5 min read"
+            },
+            {
+                id: 6,
+                title: "Data Analysis in Nursing: Turning Information into Better Care",
+                date: "April 14, 2026",
+                category: "Data Analysis",
+                excerpt: "In modern healthcare, data is everywhere. Learn how to turn everyday patient information into meaningful insights that can improve care and reduce errors.",
+                readTime: "6 min read"
+            }
+        ];
+
+        // Display latest 4 posts on homepage (previews only)
         function displayLatestPosts() {
             const container = document.getElementById('latest-posts');
             if (!container) return;
             
-            // Check if allBlogPosts exists from posts-data.js
-            if (typeof allBlogPosts === 'undefined') {
-                container.innerHTML = '<p class="loading-spinner">Error loading posts. Please refresh.</p>';
-                return;
-            }
-            
             // Get the 4 most recent posts (show newest first)
-            const latestPosts = [...allBlogPosts].reverse().slice(0, 4);
+            const latestPosts = [...blogPosts].reverse().slice(0, 4);
             
             let html = '';
             for (let i = 0; i < latestPosts.length; i++) {
                 const post = latestPosts[i];
                 html += `
-                    <div class="blog-card" onclick="openPost(${post.id})">
+                    <div class="blog-card" onclick="openFullPost(${post.id})">
                         <div class="blog-card-header">
                             <span class="blog-category">${post.category}</span>
                             <span class="blog-date">${post.date}</span>
@@ -195,13 +239,12 @@
             container.innerHTML = html;
         }
         
-        // Open post - uses the full content from posts-data.js
-        function openPost(postId) {
-            const post = allBlogPosts.find(p => p.id === postId);
-            if (post) {
-                localStorage.setItem('currentPost', JSON.stringify(post));
-                window.location.href = 'post.html';
-            }
+        // Open full post - redirects to blog.html which has all the full content
+        function openFullPost(postId) {
+            // Save the post ID to localStorage so blog.html can load the full content
+            localStorage.setItem('selectedPostId', postId);
+            // Redirect to blog page
+            window.location.href = 'blog.html';
         }
         
         // Run when page loads
